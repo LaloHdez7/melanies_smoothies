@@ -1,6 +1,9 @@
 # Import python packages
 import streamlit
 from snowflake.snowpark.functions import col
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 # Write directly to the app
 streamlit.title("Customize Your Smoothie :cup_with_straw:")
